@@ -1,0 +1,41 @@
+// Import des polices d'écriture
+
+// Shrikhand
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('../../../medias/fonts/Shrikhand/Shrikhand-regular.woff2') format('woff2'),
+         url('../../../medias/fonts/Shrikhand/Shrikhand-regular.woff') format('woff'),
+         url('../../../medias/fonts/Shrikhand/Shrikhand-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Roboto
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../../medias/fonts/Roboto/roboto-regular.woff2') format('woff2'),
+         url('../../../medias/fonts/Roboto/roboto-regular.woff') format('woff'),
+         url('../../../medias/fonts/Roboto/roboto-regular.ttf') format('ttf');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../../medias/fonts/Roboto/roboto-regular.woff2') format('woff2'),
+         url('../../../medias/fonts/Roboto/roboto-regular.woff') format('woff'),
+         url('../../../medias/fonts/Roboto/roboto-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../../medias/fonts/Roboto/roboto-bold.woff2') format('woff2'),
+         url('../../../medias/fonts/Roboto/roboto-bold.woff') format('woff'),
+         url('../../../medias/fonts/Roboto/roboto-bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}

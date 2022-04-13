@@ -1,0 +1,17 @@
+// Calcul de la valeur en EM / REM
+
+@use "variables" as var; //Précisez var.$variable pour faire référence à une variable SCSS du fichier variables.scss
+
+@use "sass:math";
+
+@function trim-unit($val) {
+    @return math.div($val, ($val * 0 + 1));
+}
+
+@function rem-calc($val) {
+    @return math.div($val, trim-unit(var.$base--font-size)) * 1rem;
+}
+
+@function em-calc($val) {
+    @return math.div($val, trim-unit(var.$base--font-size)) * 1em;
+}

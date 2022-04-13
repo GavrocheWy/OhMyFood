@@ -1,18 +1,19 @@
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
+@import "./scss/utils/variables";
+@import "./scss/utils/functions";
+@import "./scss/utils/mixins";
 
-@import "./base/base";
-@import "./base/typography";
+@import "./scss/base/base";
+@import "./scss/base/typography";
 
-@import "./components/buttons";
+@import "./scss/components/buttons";
 
-@import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
+@import "./scss/layouts/header";
+@import "./scss/layouts/searchform";
+@import "./scss/layouts/hero";
+// @import "./scss/layouts/nav";
+// @import "./scss/layouts/container";
+// @import "./scss/layouts/form";
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+// @import "./scss/pages/work";
+// @import "./scss/pages/about";
+// @import "./scss/pages/project";

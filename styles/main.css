@@ -1,3 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  color: blue;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../../medias/fonts/Shrikhand/Shrikhand-regular.woff2") format("woff2"), url("../../../medias/fonts/Shrikhand/Shrikhand-regular.woff") format("woff"), url("../../../medias/fonts/Shrikhand/Shrikhand-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../medias/fonts/Roboto/roboto-regular.woff2") format("woff2"), url("../../../medias/fonts/Roboto/roboto-regular.woff") format("woff"), url("../../../medias/fonts/Roboto/roboto-regular.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../medias/fonts/Roboto/roboto-regular.woff2") format("woff2"), url("../../../medias/fonts/Roboto/roboto-regular.woff") format("woff"), url("../../../medias/fonts/Roboto/roboto-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../medias/fonts/Roboto/roboto-bold.woff2") format("woff2"), url("../../../medias/fonts/Roboto/roboto-bold.woff") format("woff"), url("../../../medias/fonts/Roboto/roboto-bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+.primary-btn {
+  border: none;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 1.1111111111em 1.3888888889em;
+  border-radius: 5.5555555556em;
+  color: white;
+  background-image: linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6111111111em;
+  width: 100vw;
+  padding: 0.5555555556em 0.8333333333em;
+  box-shadow: 0em 0.1111111111em 0.2777777778em rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: 0px;
+  background-color: white;
+}
+
+.header--brand {
+  width: 9.4444444444em;
+  height: 100%;
+}
+.header--brand img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.searchform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8333333333em;
+  height: 2.7777777778em;
+  color: hsl(0deg, 0%, 25%);
+  background-color: #EAEAEA;
+}
+
+.searchform--input {
+  width: 7.7777777778em;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+.searchform--input::-moz-placeholder {
+  color: inherit;
+}
+.searchform--input:-ms-input-placeholder {
+  color: inherit;
+}
+.searchform--input::placeholder {
+  color: inherit;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2.7777777778em 1.6666666667em;
+  background-color: #F6F6F6;
+}
+
+.hero-section--title {
+  margin-bottom: 0.5555555556em;
+  line-height: 1.1em;
+}
+
+.hero-section--slogan {
+  margin-bottom: 1.1111111111em;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    padding: em-calc(50) em-calc(30);
+
+    background-color: $light-grey;
+}
+
+.hero-section--title {
+    margin-bottom: em-calc(10);
+    line-height: 1.1em;
+}
+
+.hero-section--slogan {
+    margin-bottom: em-calc(20);
+}
