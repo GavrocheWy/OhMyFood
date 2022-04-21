@@ -12,6 +12,7 @@
     box-shadow: $card--shadow;
     overflow: hidden;
     margin-top: em-calc(25);
+    position: relative;
 
     & a {
         text-decoration: none;
@@ -46,6 +47,9 @@
 
     .full {
         display: none;
+        background-image: linear-gradient(-10deg, $primary--color 0%, $secondary--color 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .empty {
@@ -61,4 +65,24 @@
             display: none;
         }
     }
+
+    &:active {
+        transform: scale(0.9);
+        transition: all 0.2s ease;
+    }
+}
+
+// Nouveaux restaurants
+
+.restaurant-card.new::after {
+    content: "Nouveau";
+    position: absolute;
+    padding: em-calc(5) em-calc(10);
+    top: em-calc(20);
+    right: em-calc(20);
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: em-calc(2.5);
+    color: #008766;
+    background-color: #99e2d0;
 }
