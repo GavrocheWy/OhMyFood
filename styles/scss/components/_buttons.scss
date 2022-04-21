@@ -5,6 +5,6 @@
     padding: em-calc(20) em-calc(25);
     border-radius: em-calc(100);
 
-    color: white;
+    color: $white;
     background-image: linear-gradient(-10deg, $primary--color 0%, $secondary--color 100%);
 }

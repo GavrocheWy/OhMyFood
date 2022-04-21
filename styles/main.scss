@@ -1,16 +1,20 @@
-@import "./scss/utils/variables";
 @import "./scss/utils/functions";
+@import "./scss/utils/variables";
 @import "./scss/utils/mixins";
 
 @import "./scss/base/base";
 @import "./scss/base/typography";
 
 @import "./scss/components/buttons";
+@import "./scss/components/titles";
 
 @import "./scss/layouts/header";
 @import "./scss/layouts/searchform";
 @import "./scss/layouts/hero";
+@import "./scss/layouts/_steps-section.scss";
+@import "./scss/layouts/_restaurant-section.scss";
 @import "./scss/layouts/footer";
+
 // @import "./scss/layouts/nav";
 // @import "./scss/layouts/container";
 // @import "./scss/layouts/form";

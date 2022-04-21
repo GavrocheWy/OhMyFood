@@ -2,9 +2,9 @@ footer {
     @include x-container;
     
     background-color: $dark-grey;
-    color: white;
+    color: $white;
     padding-top: em-calc(30);
-    padding-bottom: em-calc(30);
+    padding-bottom: em-calc(40);
 }
 
 footer h2 {
@@ -21,8 +21,6 @@ footer h2 {
     
     &__item {
 
-        margin-bottom: 0.5em;
-
         a {
             text-decoration: inherit;
             color: inherit;
@@ -32,7 +30,13 @@ footer h2 {
             margin-right: em-calc(15);
             width: 1em;
         }
+
+        &:not(:last-child) {
+            margin-bottom: 0.5em;
+        }
         
     }
+
+    
     
 }

@@ -4,6 +4,7 @@ $primary--color : #9356DC;
 $secondary--color : #FF79DA;
 $tertiary--color : #99E2D0;
 
+$white : #ffffff;
 $light-grey : #F6F6F6;
 $grey : #EAEAEA;
 $dark-grey : hsl(0, 0%, 25%);
@@ -16,3 +17,8 @@ $text--font : 'Roboto', 'Arial', sans-serif;
 // Variables de tailles de police 
 
 $base--font-size : 18px;
+
+// Variables de propriétés récurrentes
+
+$card--radius : em-calc(15);
+$card--shadow : em-calc(2) em-calc(4) em-calc(10) rgb(0 0 0 / 10%);
