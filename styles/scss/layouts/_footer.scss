@@ -1,0 +1,38 @@
+footer {
+    @include x-container;
+    
+    background-color: $dark-grey;
+    color: white;
+    padding-top: em-calc(30);
+    padding-bottom: em-calc(30);
+}
+
+footer h2 {
+    font-family: $title--font;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-bottom: em-calc(20);
+}
+
+.footer-list {
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.9em;
+    
+    &__item {
+
+        margin-bottom: 0.5em;
+
+        a {
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        i {
+            margin-right: em-calc(15);
+            width: 1em;
+        }
+        
+    }
+    
+}

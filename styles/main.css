@@ -45,12 +45,15 @@ body {
 }
 
 header {
+  padding-left: 1.3888888889em;
+  padding-right: 1.3888888889em;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 3.6111111111em;
   width: 100vw;
-  padding: 0.5555555556em 0.8333333333em;
+  padding-top: 0.5555555556em;
+  padding-bottom: 0.5555555556em;
   box-shadow: 0em 0.1111111111em 0.2777777778em rgba(0, 0, 0, 0.15);
   position: relative;
   top: 0px;
@@ -69,6 +72,8 @@ header {
 }
 
 .searchform {
+  padding-left: 1.3888888889em;
+  padding-right: 1.3888888889em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,12 +103,15 @@ header {
 }
 
 .hero-section {
+  padding-left: 1.3888888889em;
+  padding-right: 1.3888888889em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 2.7777777778em 1.6666666667em;
+  padding-top: 2.7777777778em;
+  padding-bottom: 2.7777777778em;
   background-color: #F6F6F6;
 }
 
@@ -114,4 +122,37 @@ header {
 
 .hero-section--slogan {
   margin-bottom: 1.1111111111em;
+}
+
+footer {
+  padding-left: 1.3888888889em;
+  padding-right: 1.3888888889em;
+  background-color: hsl(0deg, 0%, 25%);
+  color: white;
+  padding-top: 1.6666666667em;
+  padding-bottom: 1.6666666667em;
+}
+
+footer h2 {
+  font-family: "Shrikhand", "Cambria", serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-bottom: 1.1111111111em;
+}
+
+.footer-list {
+  list-style: none;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.footer-list__item {
+  margin-bottom: 0.5em;
+}
+.footer-list__item a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.footer-list__item i {
+  margin-right: 0.8333333333em;
+  width: 1em;
 }/*# sourceMappingURL=main.css.map */

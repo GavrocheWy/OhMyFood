@@ -1,11 +1,14 @@
 .hero-section {
+    @include x-container;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
     text-align: center;
-    padding: em-calc(50) em-calc(30);
+    padding-top: em-calc(50);
+    padding-bottom: em-calc(50);
 
     background-color: $light-grey;
 }

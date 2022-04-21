@@ -1,0 +1,9 @@
+// Container général
+
+@mixin x-container {
+    $x-padding : em-calc(25);
+
+    padding-left : $x-padding;
+    padding-right : $x-padding;
+}
+
