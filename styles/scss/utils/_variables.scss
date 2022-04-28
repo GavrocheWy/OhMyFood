@@ -14,11 +14,19 @@ $dark-grey : hsl(0, 0%, 25%);
 $title--font : 'Shrikhand', 'Cambria', serif;
 $text--font : 'Roboto', 'Arial', sans-serif;
 
-// Variables de tailles de police 
+// Variables de tailles de police relatives aux écrans
 
 $base--font-size : 18px;
+
+// Variables de tailles de police
+
+$small--text : 0.95em;
 
 // Variables de propriétés récurrentes
 
 $card--radius : em-calc(15);
-$card--shadow : em-calc(2) em-calc(4) em-calc(10) rgb(0 0 0 / 10%);
+$card--shadow : em-calc(2) em-calc(4) em-calc(10) rgb(0 0 0 / 15%);
+
+// Transitions
+
+$smooth-card-transition : all 0.3s ease-out;

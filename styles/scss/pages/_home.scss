@@ -1,0 +1,208 @@
+// HERO
+
+.hero-section {
+    @include x-container;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    padding-top: em-calc(50);
+    padding-bottom: em-calc(50);
+
+    background-color: $light-grey;
+}
+
+.hero-section--title {
+    margin-bottom: em-calc(10);
+    line-height: 1.1em;
+}
+
+.hero-section--slogan {
+    margin-bottom: em-calc(20);
+}
+
+// SEARCHFORM
+
+.searchform {
+    @include x-container;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: em-calc(15);
+
+    height: em-calc(50);
+
+    color: $dark-grey;
+    background-color: $grey;
+}
+
+.searchform--input {
+    width: em-calc(140);
+
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+
+    color: inherit;
+    background-color: transparent;
+
+    &::placeholder {
+        color:inherit;
+    }
+}
+
+// STEPS SECTION
+
+.steps-section {
+    @include x-container;
+
+    padding-top: em-calc(50);
+    padding-bottom: em-calc(50);
+}
+
+.steps-section__list {
+    margin-top: em-calc(25);
+}
+
+.steps-section__list--item {
+
+    list-style: none;
+    box-shadow: $card--shadow;
+    border-radius: $card--radius;
+    background-color: $light-grey;
+    padding: em-calc(30);
+    font-weight: bold;
+    margin-left: em-calc(15);
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: em-calc(30);
+    }
+
+    &::after {
+        content: attr(data-count);
+        position: absolute;
+        background-color: $primary--color;
+        color: $white;
+        font-weight: normal;
+        left: em-calc(-15);
+        top: 50%;
+        transform: translateY(-50%);
+        width: em-calc(30);
+        height: em-calc(30);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    i {
+        color: $dark-grey;
+        margin-right: em-calc(20);
+        opacity: 0.75;
+        width: em-calc(20);
+    }
+
+}
+
+// RESTAURANT SECTION
+
+.restaurant-section {
+    @include x-container;
+
+    padding-top: em-calc(50);
+    padding-bottom: em-calc(50);
+    background-color: $light-grey;
+}
+
+.restaurant-card {
+    background-color: $white;
+    border-radius: $card--radius;
+    box-shadow: $card--shadow;
+    overflow: hidden;
+    margin-top: em-calc(25);
+    position: relative;
+
+    & a {
+        text-decoration: none;
+    }
+
+    &__thumbnail {
+        background-color: $dark-grey;
+        height: em-calc(175);
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.restaurant-card__infos {
+    padding: em-calc(10) em-calc(20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $dark-grey;
+
+    &-text {
+
+        &--name {
+            font-weight: bold;
+        }
+    }
+}
+
+.restaurant-card__infos--fav {
+    font-size: 1.4em;
+    color: inherit;
+    position: relative;
+    z-index: 5;
+
+    .full {
+        display: none;
+        background-image: linear-gradient(-10deg, $primary--color 0%, $secondary--color 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .empty {
+        display: block;
+    }
+
+    &:hover {
+        .full {
+            display: block;
+        }
+
+        .empty {
+            display: none;
+        }
+    }
+
+    &:active {
+        transform: scale(0.9);
+        transition: all 0.2s ease;
+    }
+}
+
+// Nouveaux restaurants
+
+.restaurant-card.new::after {
+    content: "Nouveau";
+    position: absolute;
+    padding: em-calc(5) em-calc(10);
+    top: em-calc(20);
+    right: em-calc(20);
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: em-calc(2.5);
+    color: #008766;
+    background-color: #99e2d0;
+}

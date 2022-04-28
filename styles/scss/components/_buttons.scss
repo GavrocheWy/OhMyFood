@@ -1,5 +1,8 @@
 .primary-btn {
     border: none;
+    display: block;
+    margin: 0 auto;
+    min-width: em-calc(200);
     font-size: 0.85em;
     font-weight: bold;
     padding: em-calc(20) em-calc(25);

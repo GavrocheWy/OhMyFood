@@ -27,3 +27,13 @@ header {
         object-fit: contain;
     }
 }
+
+.header__back {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: em-calc(20);
+}

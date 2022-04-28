@@ -6,19 +6,14 @@
 @import "./scss/base/typography";
 
 @import "./scss/components/buttons";
+@import "./scss/components/add-to-fav";
 @import "./scss/components/titles";
 
 @import "./scss/layouts/header";
-@import "./scss/layouts/searchform";
-@import "./scss/layouts/hero";
-@import "./scss/layouts/_steps-section.scss";
-@import "./scss/layouts/_restaurant-section.scss";
 @import "./scss/layouts/footer";
 
-// @import "./scss/layouts/nav";
-// @import "./scss/layouts/container";
-// @import "./scss/layouts/form";
+@import "./scss/pages/home";
+@import "./scss/pages/singular";
 
-// @import "./scss/pages/work";
 // @import "./scss/pages/about";
 // @import "./scss/pages/project";

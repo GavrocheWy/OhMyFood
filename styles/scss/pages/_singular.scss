@@ -1,0 +1,153 @@
+// Image du restaurant
+
+.singular-thumbnail {
+    height: em-calc(250);
+
+    &--img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.singular-main-section {
+    border-radius: em-calc(40) em-calc(40) 0px 0px;
+    background-color: $white;
+    transform: translateY(em-calc(-40));
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    .primary-btn {
+        margin-top: em-calc(50);
+    }
+}
+
+// En-tête
+
+.singular-title-section {
+    @include x-container;
+    padding-top: em-calc(40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--h1 {
+        font-family: $title--font;
+        font-weight: normal;
+    }
+}
+
+// Éléments du menu
+
+.singular-element {
+    @include x-container;
+    margin-top: em-calc(35);
+
+    &--title {
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 1em;
+        padding-bottom: em-calc(9);
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: em-calc(50);
+            height: em-calc(4);
+            background-color: $tertiary--color;
+        }
+    }
+}
+
+// Carte 'Item' du menu
+
+$fake-padding: em-calc(15);
+
+.singular-element__item {
+    background-color: $white;
+    margin-top: em-calc(20);
+    display: flex;
+    border-radius: $card--radius;
+    box-shadow: $card--shadow;
+    overflow: hidden;
+    position: relative;
+}
+
+.singular-element__item-text {
+
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: $fake-padding;
+    margin-bottom: $fake-padding;
+    margin-left: $fake-padding;
+    transition: all 0.2s ease;
+
+    &--title {
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &--details {
+        font-size: $small--text;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.singular-element__item--price {
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    padding-left: $fake-padding;
+    padding-right: $fake-padding;
+    padding-bottom: $fake-padding;
+    width: 20%;
+}
+
+.singular-element__item__add-btn {
+    min-width: 20%;
+    height: 100%;
+    background-color: $tertiary--color;
+    font-size: 1.4em;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transform: translate(100%);
+    transition: $smooth-card-transition;
+
+    i {
+        transform: rotate(-360deg);
+        transition: $smooth-card-transition;
+    }
+}
+
+.singular-element__item:hover {
+    
+
+    .singular-element__item__add-btn {
+        transform: translate(0%);
+        transition: $smooth-card-transition;
+    }
+
+    .singular-element__item-text {
+        width: 55%;
+        transition: $smooth-card-transition;
+    }
+
+    .singular-element__item__add-btn i {
+        transform: rotate(0deg);
+        transition: $smooth-card-transition;
+    }
+}
