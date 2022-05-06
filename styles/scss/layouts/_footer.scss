@@ -5,6 +5,8 @@ footer {
     color: $white;
     padding-top: em-calc(30);
     padding-bottom: em-calc(40);
+    display: flex;
+    flex-direction: column;
 }
 
 footer h2 {
@@ -18,6 +20,8 @@ footer h2 {
     list-style: none;
     text-decoration: none;
     font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
     
     &__item {
 

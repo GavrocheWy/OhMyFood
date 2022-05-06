@@ -17,6 +17,13 @@
 
 <body>
 
+    <!-- LOADER -->
+
+    <div class="loader">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player class="loader--animation" src="./medias/lotties/animation-ohmyfood.json" autoplay></lottie-player>
+    </div>
+
     <!-- HEADER -->
 
     <header>
@@ -40,7 +47,7 @@
         <section class="hero-section">
             <h1 class="hero-section--title classic-title">Réservez le menu qui vous convient</h1>
             <p class="hero-section--slogan">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-            <button class="primary-btn">Explorer nos restaurants</button>
+            <button class="primary-btn"><a href="#">Explorer nos restaurants</a></button>
         </section>
 
         <!-- Section "Fonctionnement" -->
@@ -59,6 +66,8 @@
         <section class="restaurant-section">
 
             <h2 class="classic-title">Restaurants</h2>
+
+            <div class="restaurant-cards">
 
             <article class="restaurant-card new">
                 <a href="./singulars/singular-lapalettedugout.html">
@@ -124,6 +133,8 @@
                 </a>
             </article>
 
+            </div>
+
         </section>
 
     </main>
@@ -138,7 +149,7 @@
             <li class="footer-list__item"><a href="#"><i class="footer-list__item--icon fas fa-hands-helping"></i>Devenir partenaire</a>
             </li>
             <li class="footer-list__item"><a href="#">Mentions légales</a></li>
-            <li class="footer-list__item"><a href="#">Contact</a></li>
+            <li class="footer-list__item"><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
         </u>
     </footer>
 

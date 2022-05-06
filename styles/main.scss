@@ -1,6 +1,7 @@
 @import "./scss/utils/functions";
 @import "./scss/utils/variables";
 @import "./scss/utils/mixins";
+@import "./scss/utils/breakpoints";
 
 @import "./scss/base/base";
 @import "./scss/base/typography";
@@ -11,6 +12,7 @@
 
 @import "./scss/layouts/header";
 @import "./scss/layouts/footer";
+@import "./scss/layouts/loader";
 
 @import "./scss/pages/home";
 @import "./scss/pages/singular";

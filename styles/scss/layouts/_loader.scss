@@ -1,0 +1,50 @@
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1500;
+    background-color: $white;
+
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    animation: Loaded 0.8s ease 7.4s both;
+    box-shadow: $card--shadow;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 100%;
+        background-color: $primary--color;
+        transform-origin : 50% 0%;
+        animation: Reduce 1.2s ease-out 7.1s both;
+    }
+}
+
+.loader--animation {
+    width: 90vw;
+    max-width: em-calc(300);
+}
+
+@keyframes Loaded {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-150%);
+    }
+}
+
+@keyframes Reduce {
+    from {
+        transform: scaleY(100%);
+    }
+    to {
+        transform: scaleY(0%);
+    }
+}

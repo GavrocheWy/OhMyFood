@@ -1,3 +1,43 @@
+
+// Animations des cartes
+
+$delay-by-position: (
+  1: (
+    animation-delay: 0.25s,
+   ),
+  2: (
+    animation-delay: 0.5s,
+  ),
+  3: (
+    animation-delay: 0.75s,
+  ),
+  4: (
+    animation-delay: 1s,
+  ),
+  5: (
+    animation-delay: 1.25s,
+  )
+);
+
+@mixin delay-by-position($positions) {
+    @each $count, $position in $positions {
+        &:nth-of-type(#{$count}){
+            animation-delay: map-get($position, animation-delay)
+          }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 // Image du restaurant
 
 .singular-thumbnail {
@@ -75,6 +115,9 @@ $fake-padding: em-calc(15);
     box-shadow: $card--shadow;
     overflow: hidden;
     position: relative;
+    animation: fadeIn 0.9s ease both;
+    
+    @include delay-by-position($delay-by-position);
 }
 
 .singular-element__item-text {
@@ -85,7 +128,7 @@ $fake-padding: em-calc(15);
     margin-top: $fake-padding;
     margin-bottom: $fake-padding;
     margin-left: $fake-padding;
-    transition: all 0.2s ease;
+    transition: $smooth-card-transition;
 
     &--title {
         font-weight: bold;

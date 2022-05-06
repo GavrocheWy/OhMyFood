@@ -11,7 +11,6 @@
     text-align: center;
     padding-top: em-calc(50);
     padding-bottom: em-calc(50);
-
     background-color: $light-grey;
 }
 
@@ -62,16 +61,22 @@
     @include x-container;
 
     padding-top: em-calc(50);
-    padding-bottom: em-calc(50);
+    padding-bottom: em-calc(20);
 }
 
 .steps-section__list {
     margin-top: em-calc(25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: em-calc(40);
 }
 
 .steps-section__list--item {
 
     list-style: none;
+    width: calc(100vw);
+    max-width: none;
     box-shadow: $card--shadow;
     border-radius: $card--radius;
     background-color: $light-grey;
@@ -79,9 +84,11 @@
     font-weight: bold;
     margin-left: em-calc(15);
     position: relative;
+    transition: $smooth-card-transition;
+    margin-bottom: em-calc(30);
 
-    &:not(:last-child) {
-        margin-bottom: em-calc(30);
+    @include tablet-and-more {
+        max-width: em-calc(450);
     }
 
     &::after {
@@ -106,6 +113,17 @@
         margin-right: em-calc(20);
         opacity: 0.75;
         width: em-calc(20);
+        transition: $smooth-card-transition;
+    }
+
+    &:hover {
+        background-color: #F5EDFF;
+        transition: $smooth-card-transition;
+
+        i {
+            color: $primary--color;
+            transition: $smooth-card-transition;
+        }
     }
 
 }
@@ -120,13 +138,23 @@
     background-color: $light-grey;
 }
 
+.restaurant-cards {
+    margin-top: em-calc(25);
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: em-calc(25);
+    column-gap: em-calc(40);
+    justify-content: center;
+}
+
 .restaurant-card {
     background-color: $white;
     border-radius: $card--radius;
     box-shadow: $card--shadow;
     overflow: hidden;
-    margin-top: em-calc(25);
     position: relative;
+    width: 100%;
+    max-width: em-calc(400);
 
     & a {
         text-decoration: none;
@@ -168,6 +196,7 @@
     .full {
         display: none;
         background-image: linear-gradient(-10deg, $primary--color 0%, $secondary--color 100%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
