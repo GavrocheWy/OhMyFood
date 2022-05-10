@@ -369,7 +369,7 @@ footer h2 {
   left: 0px;
   z-index: 1500;
   background-color: #ffffff;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   -webkit-animation: Loaded 0.8s ease 7.4s both;
