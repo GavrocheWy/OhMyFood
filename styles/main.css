@@ -1,3 +1,81 @@
+@charset "UTF-8";
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ===========================
+    Feuille de style principale
+    ===========================
+
+    - Feuille de style principale du site
+
+*/
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==============
+    Variables SCSS
+    ==============
+
+    - Variables SCSS principales du site
+
+*/
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==============
+    Fonctions SCSS
+    ==============
+
+    - Fonctions SCSS principales du site
+
+*/
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==============
+    Variables SCSS
+    ==============
+
+    - Variables SCSS principales du site
+
+*/
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ============
+    Mixines SCSS
+    ============
+
+    - Mixines SCSS principales du site
+
+*/
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==========================
+    Repères des médias-queries
+    ==========================
+
+    - Repères des médias-queries et mixines associées
+
+*/
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ====
+    Base
+    ====
+
+    - CSS Reset et style de base de l'ensemble du site
+
+*/
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +88,17 @@ body {
   font-size: 18px;
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==========
+    Typography
+    ==========
+
+    - Import des polices d'écriture du site
+
+*/
 @font-face {
   font-family: "Shrikhand";
   src: url("../../../medias/fonts/Shrikhand/Shrikhand-regular.woff2") format("woff2"), url("../../../medias/fonts/Shrikhand/Shrikhand-regular.woff") format("woff"), url("../../../medias/fonts/Shrikhand/Shrikhand-regular.ttf") format("ttf");
@@ -34,6 +123,17 @@ body {
   font-weight: bold;
   font-style: normal;
 }
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ================
+    Boutons généraux
+    ================
+
+    - Style des boutons du site
+
+*/
 .primary-btn {
   border: none;
   display: block;
@@ -75,6 +175,17 @@ body {
   transition: all 0.25s ease;
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==========================
+    Bouton d'ajour aux favoris
+    ==========================
+
+    - Style du composant "Bouton d'ajout aux favoris en forme de coeur"
+
+*/
 .add-to-fav {
   font-size: 1.4em;
   color: inherit;
@@ -101,17 +212,41 @@ body {
   transition: all 0.2s ease;
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ===============
+    Titres généraux
+    ===============
+
+    - Style des titres du site
+
+*/
 .classic-title {
   font-size: 1.5em;
   font-weight: bold;
   display: flex;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
   .classic-title {
     justify-content: center;
+    font-size: 2em;
+    margin-bottom: 1.6666666667em;
   }
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    =====================
+    Entête / Header
+    =====================
+
+    - Style de l'entête du site
+
+*/
 header {
   padding-left: 1.1111111111em;
   padding-right: 1.1111111111em;
@@ -148,6 +283,17 @@ header {
   left: 1.1111111111em;
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    =====================
+    Pied de page / Footer
+    =====================
+
+    - Style du pied de page du site
+
+*/
 footer {
   padding-left: 1.1111111111em;
   padding-right: 1.1111111111em;
@@ -158,12 +304,25 @@ footer {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    gap: 2.2222222222em;
+    justify-content: center;
+    padding-bottom: 1.6666666667em;
+  }
+}
 
 footer h2 {
   font-family: "Shrikhand", "Cambria", serif;
   font-weight: normal;
   font-size: 1.2em;
   margin-bottom: 1.1111111111em;
+}
+@media screen and (min-width: 992px) {
+  footer h2 {
+    margin-bottom: 0em;
+  }
 }
 
 .footer-list {
@@ -172,6 +331,12 @@ footer h2 {
   font-size: 0.9em;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .footer-list {
+    flex-direction: row;
+    gap: 1.1111111111em;
+  }
 }
 .footer-list__item a {
   text-decoration: inherit;
@@ -185,6 +350,17 @@ footer h2 {
   margin-bottom: 0.5em;
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ============================
+    Écran de chargement / Loader
+    ============================
+
+    - Style de l'écran de chargement du site
+
+*/
 .loader {
   width: 100vw;
   height: 100vh;
@@ -193,7 +369,7 @@ footer h2 {
   left: 0px;
   z-index: 1500;
   background-color: #ffffff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   -webkit-animation: Loaded 0.8s ease 7.4s both;
@@ -250,6 +426,17 @@ footer h2 {
     transform: scaleY(0%);
   }
 }
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==============
+    Page d'accueil
+    ==============
+
+    - Style des éléments exclusifs de la page d'accueil du site
+
+*/
 .hero-section {
   padding-left: 1.1111111111em;
   padding-right: 1.1111111111em;
@@ -333,7 +520,7 @@ footer h2 {
   transition: all 0.3s ease-out;
   margin-bottom: 1.6666666667em;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
   .steps-section__list--item {
     max-width: 25em;
   }
@@ -387,6 +574,12 @@ footer h2 {
        column-gap: 2.2222222222em;
   justify-content: center;
 }
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .restaurant-cards {
+    -moz-column-gap: 1.3888888889em;
+         column-gap: 1.3888888889em;
+  }
+}
 
 .restaurant-card {
   background-color: #ffffff;
@@ -395,7 +588,16 @@ footer h2 {
   overflow: hidden;
   position: relative;
   width: 100%;
-  max-width: 22.2222222222em;
+}
+@media screen and (min-width: 992px) {
+  .restaurant-card {
+    max-width: 22.2222222222em;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .restaurant-card {
+    width: calc(50% - 1.3888888889em);
+  }
 }
 .restaurant-card a {
   text-decoration: none;
@@ -462,6 +664,17 @@ footer h2 {
   background-color: #99e2d0;
 }
 
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==================
+    Page de restaurant
+    ==================
+
+    - Style des éléments exclusifs des pages de restaurant
+
+*/
 @-webkit-keyframes fadeIn {
   from {
     transform: translateY(-30%);
@@ -472,7 +685,6 @@ footer h2 {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     transform: translateY(-30%);
@@ -483,8 +695,33 @@ footer h2 {
     opacity: 1;
   }
 }
+@-webkit-keyframes fadeInDesktop {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDesktop {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 .singular-thumbnail {
   height: 13.8888888889em;
+}
+@media screen and (min-width: 992px) {
+  .singular-thumbnail {
+    height: 22.2222222222em;
+  }
 }
 .singular-thumbnail--img {
   height: 100%;
@@ -498,8 +735,14 @@ footer h2 {
   background-color: #ffffff;
   transform: translateY(-2.2222222222em);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: stretch;
+}
+@media screen and (min-width: 992px) {
+  .singular-main-section {
+    border-radius: 0em 0em 0px 0px;
+  }
 }
 .singular-main-section .primary-btn {
   margin-top: 2.7777777778em;
@@ -513,6 +756,13 @@ footer h2 {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .singular-title-section {
+    width: 100%;
+    gap: 2.2222222222em;
+    justify-content: start;
+  }
+}
 .singular-title-section--h1 {
   font-family: "Shrikhand", "Cambria", serif;
   font-weight: normal;
@@ -523,12 +773,23 @@ footer h2 {
   padding-right: 1.1111111111em;
   margin-top: 1.9444444444em;
 }
+@media screen and (min-width: 992px) {
+  .singular-element {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 0.8333333333em;
+         column-gap: 0.8333333333em;
+    flex-wrap: wrap;
+    margin-top: 2.7777777778em;
+  }
+}
 .singular-element--title {
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 1em;
   padding-bottom: 0.5em;
   position: relative;
+  width: 100%;
 }
 .singular-element--title::after {
   content: "";
@@ -550,6 +811,15 @@ footer h2 {
   position: relative;
   -webkit-animation: fadeIn 0.9s ease both;
           animation: fadeIn 0.9s ease both;
+}
+@media screen and (min-width: 992px) {
+  .singular-element__item {
+    min-width: calc(33.33% - 0.8333333333em);
+    max-width: calc(33.33% - 0.8333333333em);
+    flex-grow: 1;
+    -webkit-animation: fadeInDesktop 0.9s ease both;
+            animation: fadeInDesktop 0.9s ease both;
+  }
 }
 .singular-element__item:nth-of-type(1) {
   -webkit-animation-delay: 0.25s;

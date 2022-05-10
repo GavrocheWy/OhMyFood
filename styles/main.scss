@@ -1,3 +1,15 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ===========================
+    Feuille de style principale
+    ===========================
+
+    - Feuille de style principale du site
+
+*/
+
 @import "./scss/utils/functions";
 @import "./scss/utils/variables";
 @import "./scss/utils/mixins";
@@ -16,6 +28,3 @@
 
 @import "./scss/pages/home";
 @import "./scss/pages/singular";
-
-// @import "./scss/pages/about";
-// @import "./scss/pages/project";

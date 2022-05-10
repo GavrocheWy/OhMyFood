@@ -1,3 +1,14 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==================
+    Page de restaurant
+    ==================
+
+    - Style des éléments exclusifs des pages de restaurant
+
+*/
 
 // Animations des cartes
 
@@ -38,10 +49,25 @@ $delay-by-position: (
     }
 }
 
+@keyframes fadeInDesktop {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 // Image du restaurant
 
 .singular-thumbnail {
     height: em-calc(250);
+
+    @include tablet-and-more {
+        height: em-calc(400);
+    }
 
     &--img {
         height: 100%;
@@ -55,8 +81,13 @@ $delay-by-position: (
     background-color: $white;
     transform: translateY(em-calc(-40));
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: stretch;
+
+    @include tablet-and-more {
+        border-radius: em-calc(0) em-calc(0) 0px 0px;
+    }
 
     .primary-btn {
         margin-top: em-calc(50);
@@ -72,6 +103,12 @@ $delay-by-position: (
     justify-content: space-between;
     align-items: center;
 
+    @include tablet-and-more {
+        width: 100%;
+        gap: em-calc(40);
+        justify-content: start;
+    }
+
     &--h1 {
         font-family: $title--font;
         font-weight: normal;
@@ -84,12 +121,21 @@ $delay-by-position: (
     @include x-container;
     margin-top: em-calc(35);
 
+    @include tablet-and-more {
+        display: flex;
+        justify-content: space-between;
+        column-gap: em-calc(15);
+        flex-wrap: wrap;
+        margin-top: em-calc(50);
+    }
+
     &--title {
         text-transform: uppercase;
         font-weight: lighter;
         font-size: 1em;
         padding-bottom: em-calc(9);
         position: relative;
+        width: 100%;
 
         &::after {
             content: "";
@@ -116,6 +162,13 @@ $fake-padding: em-calc(15);
     overflow: hidden;
     position: relative;
     animation: fadeIn 0.9s ease both;
+
+    @include tablet-and-more {
+        min-width: calc(33.33% - em-calc(15));
+        max-width: calc(33.33% - em-calc(15));
+        flex-grow: 1;
+        animation: fadeInDesktop 0.9s ease both;
+    }
     
     @include delay-by-position($delay-by-position);
 }

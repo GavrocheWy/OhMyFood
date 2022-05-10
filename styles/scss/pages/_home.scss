@@ -1,3 +1,16 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==============
+    Page d'accueil
+    ==============
+
+    - Style des éléments exclusifs de la page d'accueil du site
+
+*/
+
+
 // HERO
 
 .hero-section {
@@ -145,6 +158,10 @@
     row-gap: em-calc(25);
     column-gap: em-calc(40);
     justify-content: center;
+
+    @include tablet-only {
+        column-gap: em-calc(25);
+    }
 }
 
 .restaurant-card {
@@ -154,7 +171,14 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    max-width: em-calc(400);
+
+    @include tablet-and-more {
+        max-width: em-calc(400);
+    }
+
+    @include tablet-only {
+        width: calc(50% - em-calc(25));
+    }
 
     & a {
         text-decoration: none;

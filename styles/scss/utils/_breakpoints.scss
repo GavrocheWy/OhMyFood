@@ -1,5 +1,19 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==========================
+    Repères des médias-queries
+    ==========================
+
+    - Repères des médias-queries et mixines associées
+
+*/
+
+
 $breakpoints: (
-  tablet: 1100px
+  mobile: 768px,
+  tablet: 992px
 );
 
 @mixin tablet-only {
