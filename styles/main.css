@@ -369,7 +369,7 @@ footer h2 {
   left: 0px;
   z-index: 1500;
   background-color: #ffffff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   -webkit-animation: Loaded 0.8s ease 7.4s both;
@@ -772,6 +772,7 @@ footer h2 {
   padding-left: 1.1111111111em;
   padding-right: 1.1111111111em;
   margin-top: 1.9444444444em;
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   .singular-element {
@@ -802,6 +803,7 @@ footer h2 {
 }
 
 .singular-element__item {
+  max-width: 100%;
   background-color: #ffffff;
   margin-top: 1.1111111111em;
   display: flex;
@@ -846,6 +848,7 @@ footer h2 {
   width: 80%;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 0.8333333333em;
   margin-bottom: 0.8333333333em;
   margin-left: 0.8333333333em;

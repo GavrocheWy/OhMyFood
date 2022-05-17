@@ -120,6 +120,7 @@ $delay-by-position: (
 .singular-element {
     @include x-container;
     margin-top: em-calc(35);
+    width: 100%;
 
     @include tablet-and-more {
         display: flex;
@@ -154,6 +155,7 @@ $delay-by-position: (
 $fake-padding: em-calc(15);
 
 .singular-element__item {
+    max-width: 100%;
     background-color: $white;
     margin-top: em-calc(20);
     display: flex;
@@ -178,6 +180,7 @@ $fake-padding: em-calc(15);
     width: 80%;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
     margin-top: $fake-padding;
     margin-bottom: $fake-padding;
     margin-left: $fake-padding;
