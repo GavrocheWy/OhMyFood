@@ -13,7 +13,9 @@
 
 $breakpoints: (
   mobile: 768px,
-  tablet: 992px
+  tablet: 992px,
+  large-desktop: 2400px,
+  x-large-desktop: 3000px
 );
 
 @mixin tablet-only {
@@ -24,6 +26,18 @@ $breakpoints: (
 
   @mixin tablet-and-more {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+  }
+
+  @mixin large-desktop-and-more {
+    @media screen and (min-width: map-get($breakpoints, large-desktop)) {
+        @content;
+    }
+  }
+
+  @mixin x-large-desktop-and-more {
+    @media screen and (min-width: map-get($breakpoints, x-large-desktop)) {
         @content;
     }
   }

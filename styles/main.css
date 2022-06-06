@@ -87,6 +87,16 @@ body {
   font-weight: normal;
   font-size: 18px;
 }
+@media screen and (min-width: 2400px) {
+  body {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 3000px) {
+  body {
+    font-size: 40px;
+  }
+}
 
 /*
 
