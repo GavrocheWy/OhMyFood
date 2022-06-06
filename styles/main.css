@@ -118,7 +118,7 @@ body {
 @font-face {
   font-family: "Roboto";
   src: url("../../../medias/fonts/Roboto/roboto-regular.woff2") format("woff2"), url("../../../medias/fonts/Roboto/roboto-regular.woff") format("woff"), url("../../../medias/fonts/Roboto/roboto-regular.ttf") format("ttf");
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -183,6 +183,11 @@ body {
 .primary-btn:hover::after {
   opacity: 0.1;
   transition: all 0.25s ease;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /*
@@ -379,7 +384,7 @@ footer h2 {
   left: 0px;
   z-index: 1500;
   background-color: #ffffff;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   -webkit-animation: Loaded 0.8s ease 7.4s both;
@@ -422,18 +427,18 @@ footer h2 {
 }
 @-webkit-keyframes Reduce {
   from {
-    transform: scaleY(100%);
+    transform: scaleY(1);
   }
   to {
-    transform: scaleY(0%);
+    transform: scaleY(0);
   }
 }
 @keyframes Reduce {
   from {
-    transform: scaleY(100%);
+    transform: scaleY(1);
   }
   to {
-    transform: scaleY(0%);
+    transform: scaleY(0);
   }
 }
 /*

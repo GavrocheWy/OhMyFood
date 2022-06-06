@@ -19,7 +19,7 @@
     z-index: 1500;
     background-color: $white;
 
-    display: none;
+    display: flex;
     
     justify-content: center;
     align-items: center;
@@ -54,9 +54,9 @@
 
 @keyframes Reduce {
     from {
-        transform: scaleY(100%);
+        transform: scaleY(1);
     }
     to {
-        transform: scaleY(0%);
+        transform: scaleY(0);
     }
 }
