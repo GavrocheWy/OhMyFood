@@ -1,0 +1,14 @@
+{
+  "name": "projet-2---ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/main.scss:./public/css/style.css -w --style compressed",
+    "prefix": "postcss ./styles/main.css --use autoprefixer -d ./styles/prefixed-main"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
