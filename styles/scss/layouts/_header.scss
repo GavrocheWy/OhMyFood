@@ -1,0 +1,51 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    =====================
+    Entête / Header
+    =====================
+
+    - Style de l'entête du site
+
+*/
+
+
+header {
+    @include x-container;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: em-calc(65);
+    padding-top: em-calc(10);
+    padding-bottom: em-calc(10);
+    box-shadow: em-calc(0) em-calc(2) em-calc(5) rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    top: 0px;
+
+    background-color: $white;
+}
+
+.header--brand {
+    width: em-calc(170);
+    height: 100%;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.header__back {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: em-calc(20);
+}

@@ -1,0 +1,23 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ===============
+    Titres généraux
+    ===============
+
+    - Style des titres du site
+
+*/
+
+.classic-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+
+    @include tablet-and-more {
+        justify-content: center;
+        font-size: 2em;
+        margin-bottom: em-calc(30);
+    }
+}

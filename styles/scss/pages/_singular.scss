@@ -1,0 +1,252 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==================
+    Page de restaurant
+    ==================
+
+    - Style des éléments exclusifs des pages de restaurant
+
+*/
+
+// Animations des cartes
+
+$delay-by-position: (
+  1: (
+    animation-delay: 0.25s,
+   ),
+  2: (
+    animation-delay: 0.5s,
+  ),
+  3: (
+    animation-delay: 0.75s,
+  ),
+  4: (
+    animation-delay: 1s,
+  ),
+  5: (
+    animation-delay: 1.25s,
+  )
+);
+
+@mixin delay-by-position($positions) {
+    @each $count, $position in $positions {
+        &:nth-of-type(#{$count}){
+            animation-delay: map-get($position, animation-delay)
+          }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDesktop {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+// Image du restaurant
+
+.singular-thumbnail {
+    height: em-calc(250);
+
+    @include tablet-and-more {
+        height: em-calc(400);
+    }
+
+    &--img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.singular-main-section {
+    border-radius: em-calc(40) em-calc(40) 0px 0px;
+    background-color: $white;
+    transform: translateY(em-calc(-40));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: stretch;
+
+    @include tablet-and-more {
+        border-radius: em-calc(0) em-calc(0) 0px 0px;
+    }
+
+    .primary-btn {
+        margin-top: em-calc(50);
+    }
+}
+
+// En-tête
+
+.singular-title-section {
+    @include x-container;
+    padding-top: em-calc(40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet-and-more {
+        width: 100%;
+        gap: em-calc(40);
+        justify-content: start;
+    }
+
+    &--h1 {
+        font-family: $title--font;
+        font-weight: normal;
+    }
+}
+
+// Éléments du menu
+
+.singular-element {
+    @include x-container;
+    margin-top: em-calc(35);
+    width: 100%;
+
+    @include tablet-and-more {
+        display: flex;
+        justify-content: space-between;
+        column-gap: em-calc(15);
+        flex-wrap: wrap;
+        margin-top: em-calc(50);
+    }
+
+    &--title {
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 1em;
+        padding-bottom: em-calc(9);
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: em-calc(50);
+            height: em-calc(4);
+            background-color: $tertiary--color;
+        }
+    }
+}
+
+// Carte 'Item' du menu
+
+$fake-padding: em-calc(15);
+
+.singular-element__item {
+    max-width: 100%;
+    background-color: $white;
+    margin-top: em-calc(20);
+    display: flex;
+    border-radius: $card--radius;
+    box-shadow: $card--shadow;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 0.9s ease both;
+
+    @include tablet-and-more {
+        min-width: calc(33.33% - em-calc(15));
+        max-width: calc(33.33% - em-calc(15));
+        flex-grow: 1;
+        animation: fadeInDesktop 0.9s ease both;
+    }
+    
+    @include delay-by-position($delay-by-position);
+}
+
+.singular-element__item-text {
+
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: $fake-padding;
+    margin-bottom: $fake-padding;
+    margin-left: $fake-padding;
+    transition: $smooth-card-transition;
+
+    &--title {
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &--details {
+        font-size: $small--text;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.singular-element__item--price {
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    padding-left: $fake-padding;
+    padding-right: $fake-padding;
+    padding-bottom: $fake-padding;
+    width: 20%;
+}
+
+.singular-element__item__add-btn {
+    min-width: 20%;
+    height: 100%;
+    background-color: $tertiary--color;
+    font-size: 1.4em;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transform: translate(100%);
+    transition: $smooth-card-transition;
+
+    i {
+        transform: rotate(-360deg);
+        transition: $smooth-card-transition;
+    }
+}
+
+.singular-element__item:hover {
+    
+
+    .singular-element__item__add-btn {
+        transform: translate(0%);
+        transition: $smooth-card-transition;
+    }
+
+    .singular-element__item-text {
+        width: 55%;
+        transition: $smooth-card-transition;
+    }
+
+    .singular-element__item__add-btn i {
+        transform: rotate(0deg);
+        transition: $smooth-card-transition;
+    }
+}

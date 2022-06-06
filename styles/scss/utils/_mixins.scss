@@ -1,0 +1,21 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ============
+    Mixines SCSS
+    ============
+
+    - Mixines SCSS principales du site
+
+*/
+
+// Container général
+
+@mixin x-container {
+    $x-padding : em-calc(20);
+
+    padding-left : $x-padding;
+    padding-right : $x-padding;
+}
+

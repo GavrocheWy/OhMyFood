@@ -1,0 +1,74 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    =====================
+    Pied de page / Footer
+    =====================
+
+    - Style du pied de page du site
+
+*/
+
+footer {
+    @include x-container;
+    
+    background-color: $dark-grey;
+    color: $white;
+    padding-top: em-calc(30);
+    padding-bottom: em-calc(40);
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-and-more {
+        flex-direction: row;
+        gap: em-calc(40);
+        justify-content: center;
+        padding-bottom: em-calc(30);
+    }
+}
+
+footer h2 {
+    font-family: $title--font;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-bottom: em-calc(20);
+
+    @include tablet-and-more {
+        margin-bottom: 0em;
+    }
+}
+
+.footer-list {
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-and-more {
+        flex-direction: row;
+        gap: em-calc(20);
+    }
+    
+    &__item {
+
+        a {
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        i {
+            margin-right: em-calc(15);
+            width: 1em;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.5em;
+        }
+        
+    }
+
+    
+    
+}

@@ -1,0 +1,44 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ==========================
+    Bouton d'ajour aux favoris
+    ==========================
+
+    - Style du composant "Bouton d'ajout aux favoris en forme de coeur"
+
+*/
+
+.add-to-fav {
+    font-size: 1.4em;
+    color: inherit;
+    position: relative;
+    z-index: 5;
+
+    .full {
+        display: none;
+        background-image: linear-gradient(-10deg, $primary--color 0%, $secondary--color 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .empty {
+        display: block;
+    }
+
+    &:hover {
+        .full {
+            display: block;
+        }
+
+        .empty {
+            display: none;
+        }
+    }
+
+    &:active {
+        transform: scale(0.9);
+        transition: all 0.2s ease;
+    }
+}

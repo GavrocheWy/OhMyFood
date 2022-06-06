@@ -1,0 +1,32 @@
+/*
+
+// Feuille de style SCSS du site de OhMyFood
+
+    ====
+    Base
+    ====
+
+    - CSS Reset et style de base de l'ensemble du site
+
+*/
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text--font;
+    font-weight: normal; 
+    font-size: $base--font-size;
+
+    @include large-desktop-and-more {
+        font-size: $large--font-size;
+    }
+
+    @include x-large-desktop-and-more {
+        font-size: $x-large--font-size;
+    }
+}

@@ -1,18 +1,30 @@
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
+/*
 
-@import "./base/base";
-@import "./base/typography";
+// Feuille de style SCSS du site de OhMyFood
 
-@import "./components/buttons";
+    ===========================
+    Feuille de style principale
+    ===========================
 
-@import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
+    - Feuille de style principale du site
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+*/
+
+@import "./scss/utils/functions";
+@import "./scss/utils/variables";
+@import "./scss/utils/mixins";
+@import "./scss/utils/breakpoints";
+
+@import "./scss/base/base";
+@import "./scss/base/typography";
+
+@import "./scss/components/buttons";
+@import "./scss/components/add-to-fav";
+@import "./scss/components/titles";
+
+@import "./scss/layouts/header";
+@import "./scss/layouts/footer";
+@import "./scss/layouts/loader";
+
+@import "./scss/pages/home";
+@import "./scss/pages/singular";
